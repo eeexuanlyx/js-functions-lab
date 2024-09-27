@@ -180,14 +180,21 @@ Complete the exercise in the space below:
 */
 
 const basicCalculator = function (x, y, z) {
-  if (z === "add") {
-    return x + y;
-  } else if (z === "subtract") {
-    return x - y;
-  } else if (z === "multiply") {
-    return x * y;
-  } else if (z === "divide") {
-    return x / y;
+  switch (z) {
+    case "add":
+      return x + y;
+      break;
+    case "subtract":
+      return x - y;
+      break;
+    case "multiply":
+      return x * y;
+      break;
+    case "divide":
+      return x / y;
+      break;
+    default:
+      return "invalid";
   }
 };
 console.log("Exercise 9 Result:", basicCalculator(10, 5, "subtract"));
